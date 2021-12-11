@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.willherofxfinal.controller">
+   <children>
+      <ImageView fx:id="myImage" fitHeight="67.0" fitWidth="95.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../WillHero/src/game-gui/pics/hero.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
