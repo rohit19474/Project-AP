@@ -7,7 +7,6 @@
 
 <AnchorPane prefHeight="482.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.willherofxfinal.controller">
    <children>
-      <Button fx:id="test" layoutX="149.0" layoutY="442.0" mnemonicParsing="false" onAction="#jump1" opacity="0.0" text="test" />
       <ImageView fx:id="heroimg" fitHeight="45.0" fitWidth="38.0" layoutX="56.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@unicorn.png" />
@@ -28,10 +27,19 @@
             <Image url="@../../../../../../../../Downloads/Sprite/T_Islands_11.png" />
          </image>
       </ImageView>
-      <Button fx:id="right" layoutX="31.0" layoutY="442.0" mnemonicParsing="false" onAction="#moveForward" text="RIGHT" />
       <Button fx:id="pause" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#pauseMenu" text="PAUSE" />
       <Button fx:id="menu" layoutX="737.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoMenu" text="MENU" />
-      <AnchorPane fx:id="pausemenu" layoutX="167.0" layoutY="88.0" prefHeight="275.0" prefWidth="459.0" style="-fx-background-color: #5fb5e1;">
+      <ImageView fx:id="redorc" fitHeight="62.0" fitWidth="70.0" layoutX="630.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@RedOrc1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greenorc" fitHeight="68.0" fitWidth="107.0" layoutX="367.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Orc2.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="pausemenu" layoutX="172.0" layoutY="68.0" prefHeight="275.0" prefWidth="459.0" style="-fx-background-color: #5fb5e1;">
          <children>
             <Button fx:id="resume" layoutX="51.0" layoutY="44.0" mnemonicParsing="false" onAction="#resume" prefHeight="62.0" prefWidth="122.0" text="RESUME" />
             <Button layoutX="294.0" layoutY="44.0" mnemonicParsing="false" onAction="#exitfromGameingame" prefHeight="62.0" prefWidth="122.0" text="EXIT" />
@@ -39,6 +47,5 @@
             <Button layoutX="294.0" layoutY="156.0" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="62.0" prefWidth="122.0" text="MENU" />
          </children>
       </AnchorPane>
-      <Button fx:id="test1" layoutX="94.0" layoutY="442.0" mnemonicParsing="false" text="test1" />
    </children>
 </AnchorPane>
