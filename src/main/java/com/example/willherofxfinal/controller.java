@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.WeakHashMap;
@@ -39,6 +40,10 @@ public class controller implements Initializable {
     @FXML
     private ImageView heroimg;
     @FXML
+    private ImageView redorc;
+    @FXML
+    private ImageView greenorc;
+    @FXML
     private ImageView isl1;
     @FXML
     private Button pause1;
@@ -53,6 +58,8 @@ public class controller implements Initializable {
     @FXML
     private Pane pausemenu;
     TranslateTransition t1;
+    TranslateTransition t2;
+    TranslateTransition t3;
     TranslateTransition t11;
 
 
@@ -75,17 +82,12 @@ public class controller implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         test = (Button)scene.lookup("#test");
+        right = (Button)scene.lookup("#right");
         pausemenu = (Pane)scene.lookup("#pausemenu");
+        heroimg = (ImageView)scene.lookup("#heroimg");
+        redorc = (ImageView)scene.lookup("#redorc");
+        greenorc = (ImageView)scene.lookup("#greenorc");
         stage.show();
-        test.fire();
-        pausemenu.setVisible(false);
-
-
-    }
-
-
-    public void  jump1()
-    {
 
         t1 = new TranslateTransition();
         t1.setNode(heroimg);
@@ -93,6 +95,70 @@ public class controller implements Initializable {
         t1.setCycleCount(TranslateTransition.INDEFINITE);
         t1.setAutoReverse(true);
         t1.play();
+
+
+
+        t2 = new TranslateTransition();
+        t2.setNode(redorc);
+        t2.setByY(-50);
+        t2.setCycleCount(TranslateTransition.INDEFINITE);
+        t2.setAutoReverse(true);
+        t2.play();
+
+
+        t3 = new TranslateTransition();
+        t3.setNode(greenorc);
+        t3.setByY(-20);
+        t3.setCycleCount(TranslateTransition.INDEFINITE);
+        t3.setAutoReverse(true);
+        t3.play();
+
+
+        pausemenu.setVisible(false);
+
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if(keyEvent.getCode()==KeyCode.D){
+                    t11 = new TranslateTransition();
+                    t11.setNode(heroimg);
+                    t11.setByX(80);
+                    t11.play();
+
+                }
+            }
+        });
+
+
+    }
+
+
+    public void  jump1() throws InterruptedException {
+
+        t1 = new TranslateTransition();
+        t1.setNode(heroimg);
+        t1.setByY(-100);
+        t1.setCycleCount(TranslateTransition.INDEFINITE);
+        t1.setAutoReverse(true);
+        t1.play();
+
+
+
+        t2 = new TranslateTransition();
+        t2.setNode(redorc);
+        t2.setByY(-50);
+        t2.setCycleCount(TranslateTransition.INDEFINITE);
+        t2.setAutoReverse(true);
+        t2.play();
+
+
+        t3 = new TranslateTransition();
+        t3.setNode(greenorc);
+        t3.setByY(-20);
+        t3.setCycleCount(TranslateTransition.INDEFINITE);
+        t3.setAutoReverse(true);
+        t3.play();
+
     }
 
     public void exitfromGame(ActionEvent event) throws IOException {
@@ -127,12 +193,16 @@ public class controller implements Initializable {
 
     public void pauseMenu(ActionEvent event) throws IOException {
         t1.pause();
+        t2.pause();
+        t3.pause();
         pausemenu.setVisible(true);
 
     }
 
     public void resume(ActionEvent event) throws IOException {
         t1.play();
+        t2.play();
+        t3.play();
         pausemenu.setVisible(false);
     }
 
@@ -158,6 +228,20 @@ public class controller implements Initializable {
 
     }
 
+    public void move() throws IOException {
+
+        URL url = new File("src/main/resources/com/example/willherofxfinal/level1.fxml").toURI().toURL();
+        root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        test1 = (Button)scene.lookup("#test1");
+        test1.setOnKeyPressed(e -> {
+            if(e.getCode()==KeyCode.A) {
+                System.out.println("HELLO");
+                moveForward();
+            }
+        });
+    }
+
 
 
     public void moveForward() {
@@ -168,6 +252,11 @@ public class controller implements Initializable {
         t11.setByX(80);
         t11.play();
 
+    }
+
+    public void moveUP()
+    {
+        System.out.println("UP");
     }
 
 
