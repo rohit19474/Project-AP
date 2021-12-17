@@ -4,32 +4,29 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="482.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.willherofxfinal.controller">
    <children>
-      <ImageView fx:id="heroimg" fitHeight="45.0" fitWidth="38.0" layoutX="56.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@unicorn.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="isl1" fitHeight="94.0" fitWidth="200.0" layoutX="60.0" layoutY="247.0">
+      <ImageView fx:id="isl1" fitHeight="94.0" fitWidth="200.0" layoutX="14.0" layoutY="250.0">
          <image>
             <Image url="@../../../../../../../../Downloads/Sprite/T_Islands_01.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="isl2" fitHeight="133.0" fitWidth="200.0" layoutX="315.0" layoutY="247.0">
+      <ImageView fx:id="isl2" fitHeight="133.0" fitWidth="200.0" layoutX="302.0" layoutY="250.0">
          <image>
             <Image url="@../../../../../../../../Downloads/Sprite/T_Islands_03.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="isl3" fitHeight="195.0" fitWidth="200.0" layoutX="552.0" layoutY="247.0">
+      <ImageView fx:id="isl3" fitHeight="195.0" fitWidth="200.0" layoutX="603.0" layoutY="254.0">
          <image>
             <Image url="@../../../../../../../../Downloads/Sprite/T_Islands_11.png" />
          </image>
       </ImageView>
       <Button fx:id="pause" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#pauseMenu" text="PAUSE" />
       <Button fx:id="menu" layoutX="737.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoMenu" text="MENU" />
-      <ImageView fx:id="redorc" fitHeight="62.0" fitWidth="70.0" layoutX="630.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="redorc" fitHeight="62.0" fitWidth="70.0" layoutX="630.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@RedOrc1.png" />
          </image>
@@ -39,12 +36,29 @@
             <Image url="@Orc2.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="pausemenu" layoutX="172.0" layoutY="68.0" prefHeight="275.0" prefWidth="459.0" style="-fx-background-color: #5fb5e1;">
+      <Button fx:id="test" layoutX="14.0" layoutY="442.0" mnemonicParsing="false" onAction="#jump1" opacity="0.0" text="test" />
+      <Button fx:id="test1" layoutX="57.0" layoutY="442.0" mnemonicParsing="false" onAction="#moveForward" opacity="0.0" text="test1" />
+      <Button fx:id="dead" layoutX="341.0" layoutY="14.0" mnemonicParsing="false" onAction="#testfunc" opacity="0.0" text="dead" />
+      <ImageView fx:id="temp1" fitHeight="185.0" fitWidth="28.0" layoutX="533.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="temp2" fitHeight="195.0" fitWidth="6.0" layoutX="263.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="obs2" fitHeight="16.0" fitWidth="70.0" layoutX="629.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="heroimg" fitHeight="54.0" fitWidth="51.0" layoutX="38.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@unicorn.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="orckilled" fill="#000407" layoutX="341.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORC KILLED" wrappingWidth="221.82906341552734">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="pausemenu" layoutX="172.0" layoutY="14.0" prefHeight="275.0" prefWidth="459.0" style="-fx-background-color: #5fb5e1;">
          <children>
             <Button fx:id="resume" layoutX="51.0" layoutY="44.0" mnemonicParsing="false" onAction="#resume" prefHeight="62.0" prefWidth="122.0" text="RESUME" />
             <Button layoutX="294.0" layoutY="44.0" mnemonicParsing="false" onAction="#exitfromGameingame" prefHeight="62.0" prefWidth="122.0" text="EXIT" />
             <Button layoutX="51.0" layoutY="156.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="122.0" text="SAVE" />
             <Button layoutX="294.0" layoutY="156.0" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="62.0" prefWidth="122.0" text="MENU" />
+            <ImageView fx:id="obs1" fitHeight="16.0" fitWidth="70.0" layoutX="195.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </children>
