@@ -26,12 +26,6 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root);
             ModuleLayer.Controller control = loader.getController();
-            scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-                @Override
-                public void handle(KeyEvent keyEvent) {
-
-                }
-            });
             stage.setScene(scene);
             stage.show();
         } catch(Exception e) {
